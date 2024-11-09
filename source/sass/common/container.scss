@@ -1,0 +1,11 @@
+.container {
+  padding: 0 15px;
+
+  @include vp-768 {
+    padding: 0 45px;
+  }
+
+  @include vp-1366 {
+    padding: 0 103px;
+  }
+}

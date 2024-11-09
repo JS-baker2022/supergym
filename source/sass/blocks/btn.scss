@@ -1,0 +1,62 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: $color-default-white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &--red {
+    background-color: $color-default-red-tab;
+  }
+
+  &--hero {
+    border: 2px solid $color-default-white;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &:hover {
+      background-color: $color-default-white;
+      color: $color-default-secondary;
+    }
+
+    &:focus {
+      background-color: $color-focus-white;
+      color: $color-default-secondary;
+      border: 2px solid $color-default-black;
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      color: $color-default-primary;
+    }
+  }
+
+  &--games {
+    border: 2px solid $color-default-white;
+    align-self: center;
+    justify-content: center;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+
+
+  &--disabled {
+    color: $color-alt-white;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:disabled {
+
+
+    pointer-events: none;
+  }
+}
