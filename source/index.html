@@ -1,32 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPERGYM</title>
+  <meta name="description" content="Самый большой фитнесс центр за Уралом для всех спортсменов.">
+  <link rel="stylesheet" href="sass/style.scss">
+  <link rel="preload" href="fonts/alumni-sans/alumni-sans-v18-cyrillic_latin-600.woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/alumni-sans/alumni-sans-v18-cyrillic_latin-800.woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-v27-cyrillic_latin-300.woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-v27-cyrillic_latin-700.woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-v27-cyrillic_latin-regular.woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+<body class="page-body">
+  <!-- пример использования спрайта -->
+  <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="price">price</div>
-    <div data-test="games">games</div>
-    <div data-test="juri">juri</div>
-    <div data-test="features">features</div>
-    <div data-test="offers">offers</div>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+    </svg> -->
+  <header class="header container" data-test="hero">
+    <div class="header__contacts">
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="Логотип Логотип фитнес центра Supergym." width="100" height="20">
+      </div>
+      <div class="header__phone">
+        <a class="header__phone-link" href="tel:+78005555555" target="_blank"
+          rel="noreferrer noopener">8 800 555-55-55</a>
+      </div>
+    </div>
+    <div class="header__hero">
+      <div class="header__hero-wrapper">
+        <ul class="header__hero-list">
+          <li class="header__hero-list-item">Тренажёрный&nbsp;зал</li>
+          <li class="header__hero-list-item">Групповые&nbsp;занятия</li>
+          <li class="header__hero-list-item">Кардио&nbsp;зона</li>
+        </ul>
+        <h3 class="header__hero-title header__hero-title--city">Омск</h3>
+        <h2 class="header__hero-title header__hero-title--name">Фитнес центр</h2>
+        <a class="header__hero-btn btn btn--hero" href="#price">Купить абонемент</a>
+      </div>
+      <div class="header__hero-image">
+        <picture>
+          <source type="image/webp" media="(min-width: 1366px)"
+            srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x" width="500" height="524">
+          <source type="image/webp" srcset="img/hero@1x.webp 1x, img/hero@2x.webp 2x" width="324" height="390">
+          <source media="(min-width: 1366px)" srcset="img/hero-desktop@1x.png 1x, img/hero-desktop@2x.png 2x"
+            width="500" height="524">
+          <img src="img/hero@1x.png" srcset="img/hero@2x.png" alt="Воспитанник фитнес центра Supergym." width="324"
+            height="390">
+        </picture>
+      </div>
+    </div>
+  </header>
+
+  <section class="about" data-test="about">about</section>
+  <section class="price" data-test="price">price</section>
+  <section class="games" data-test="games">games</section>
+  <section class="juri" data-test="juri">juri</section>
+  <section class="features" data-test="features">features</section>
+  <section class="offers" data-test="offers">offers</section>
+  <section class="faq" data-test="faq">faq</section>
+  <section class="reviews" data-test="reviews">reviews</section>
+  <section class="form" data-test="form">form</section>
+  <section class="footer" data-test="footer">footer</section>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>
