@@ -63,17 +63,64 @@
       </div>
     </div>
   </header>
+  <main>
+    <section class="about" data-test="about">
+      <div class="about__title-block">
+        <h2 class="about__title">Тренажёрный зал</h2>
+        <p class="about__title-description">Просторный зал площадью 900 кв/м</p>
+      </div>
+      <div class="about__text-content">
+        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+        <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+      </div>
+      <div class="about__media-block">
+        <div class="about__img">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)"
+              srcset="img/gym-desktop@1x.webp 1x, img/gym-desktop@2x.webp 2x" width="660" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/img/gym-tablet@1x.webp 1x, img/img/gym-tablet@2x.webp 2x" width="678" height="345">
+            <source type="image/webp" srcset="img/gym@1x.webp 1x, img/gym@2x.webp 2x" width="320" height="280">
+            <source media="(min-width: 1366px)" srcset="img/gym-desktop@1x.jpg 1x, img/gym-desktop@2x.jpg 2x"
+              width="660" height="400">
+            <source media="(min-width: 768px)" srcset="img/gym-tablet@1x.jpg 1x, gym-tablet@2x.jpg 2x"
+              width="678" height="345">
+            <img src="img/gym@1x.jpg" srcset="img/gym@2x.jpg" alt="Вид тренажёров в зале фитнес центра Supergym." width="320"
+              height="280">
+          </picture>
+        </div>
+        <div class="about__video">
+          <div class="about__video-poster">
+            <picture>
+              <source type="image/webp" media="(min-width: 1366px)"
+                srcset="img/poster-desktop@1x.webp 1x, img/poster-desktop@2x.webp 2x" width="660" height="400">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/img/poster-tablet@1x.webp 1x, img/img/poster-tablet@2x.webp 2x" width="270" height="170">
+              <source type="image/webp" srcset="img/poster@1x.webp 1x, img/poster@2x.webp 2x" width="320" height="170">
+              <source media="(min-width: 1366px)" srcset="img/poster-desktop@1x.jpg 1x, img/poster-desktop@2x.jpg 2x"
+                width="360" height="230">
+              <source media="(min-width: 768px)" srcset="img/poster-tablet@1x.jpg 1x, poster-tablet@2x.jpg 2x"
+                width="270" height="170">
+              <img src="img/poster@1x.jpg" srcset="img/poster@2x.jpg" alt="Постер предпросмотра видео тренажёрного зала фитнес центра Supergym." width="320"
+                height="170">
+            </picture>
+          </div>
+          <button class="about__video-play-btn"><span class="visually-hidden">Нажмите на кнопку для просмотра видео.</span></button>
+        </div>
+      </div>
+      
 
-  <section class="about" data-test="about">about</section>
-  <section class="price" data-test="price">price</section>
-  <section class="games" data-test="games">games</section>
-  <section class="juri" data-test="juri">juri</section>
-  <section class="features" data-test="features">features</section>
-  <section class="offers" data-test="offers">offers</section>
-  <section class="faq" data-test="faq">faq</section>
-  <section class="reviews" data-test="reviews">reviews</section>
-  <section class="form" data-test="form">form</section>
-  <section class="footer" data-test="footer">footer</section>
+    </section>
+    <section class="price" data-test="price">price</section>
+    <section class="games" data-test="games">games</section>
+    <section class="juri" data-test="juri">juri</section>
+    <section class="features" data-test="features">features</section>
+    <section class="offers" data-test="offers">offers</section>
+    <section class="faq" data-test="faq">faq</section>
+    <section class="reviews" data-test="reviews">reviews</section>
+    <section class="form" data-test="form">form</section>
+    <section class="footer" data-test="footer">footer</section> 
+  </main>
   <script type="module" src="js/main.js"></script>
 </body>
 
