@@ -23,11 +23,6 @@ body {
   margin: 0;
 }
 
-a {
-  color: $color-default-black;
-  text-decoration: none;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -39,8 +34,4 @@ a {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-}
-
-img {
-  display: block;
 }
