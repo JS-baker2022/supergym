@@ -1,0 +1,235 @@
+.footer {
+  background-color: $color-default-footer;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 30px;
+  color: $color-default-white;
+
+  @include vp-768 {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    flex-direction: row;
+  }
+
+  @include vp-1366 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo img {
+  @include vp-768 {
+    width: 110px;
+    height: 22px;
+  }
+
+  @include vp-1366 {
+    width: 130px;
+    height: 26px;
+  }
+}
+
+.footer__nav-list {
+  @include list-style-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 35px;
+
+  @include vp-768 {
+    width: 463px;
+    column-gap: 0;
+    justify-content: space-around;
+  }
+
+  @include vp-1366 {
+    width: 600px;
+    column-gap: 82px;
+  }
+}
+
+.footer__nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer__nav-link {
+  color: inherit;
+}
+
+.footer__social-list {
+  @include list-style-reset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+
+  @include vp-768 {
+    column-gap: 15px;
+  }
+
+  @include vp-1366 {
+    column-gap: 10px;
+  }
+}
+
+.footer__social-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.footer__social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: $color-default-white;
+
+  &--vk {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      -webkit-mask-image: url("/__spritemap#sprite-vk-view");
+      mask-image: url("/__spritemap#sprite-vk-view");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 14px 14px;
+      mask-size: 14px 14px;
+      -webkit-mask-position: 50% 50%;
+      mask-position: 50% 50%;
+      background-color: $color-default-footer;
+      top:0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      transform: translateX(46%) translateY(45%);
+    }
+
+    &:hover {
+      background-color: $color-focus-social-icon;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:focus {
+      background-color: $color-default-secondary;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-default-primary;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &--ok {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      -webkit-mask-image: url("/__spritemap#sprite-ok-view");
+      mask-image: url("/__spritemap#sprite-ok-view");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 14px 14px;
+      mask-size: 14px 14px;
+      -webkit-mask-position: 50% 50%;
+      mask-position: 50% 50%;
+      background-color: $color-default-footer;
+      top:0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      transform: translateX(46%) translateY(45%);
+    }
+
+    &:hover {
+      background-color: $color-focus-social-icon;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:focus {
+      background-color: $color-default-secondary;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-default-primary;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &--reddit {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      -webkit-mask-image: url("/__spritemap#sprite-reddit-view");
+      mask-image: url("/__spritemap#sprite-reddit-view");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 14px 14px;
+      mask-size: 14px 14px;
+      -webkit-mask-position: 50% 50%;
+      mask-position: 50% 50%;
+      background-color: $color-default-footer;
+      top:0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      transform: translateX(46%) translateY(45%);
+    }
+
+    &:hover {
+      background-color: $color-focus-social-icon;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:focus {
+      background-color: $color-default-secondary;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-default-primary;
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &--disabled {
+    background-color: $color-disabled-white;
+    pointer-events: none;
+  }
+}
