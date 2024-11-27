@@ -40,6 +40,7 @@
 
 .footer__nav-list {
   @include list-style-reset;
+
   display: flex;
   flex-wrap: wrap;
   gap: 20px 35px;
@@ -67,6 +68,7 @@
 
 .footer__social-list {
   @include list-style-reset;
+
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
@@ -111,7 +113,7 @@
       -webkit-mask-position: 50% 50%;
       mask-position: 50% 50%;
       background-color: $color-default-footer;
-      top:0;
+      top: 0;
       left: 0;
       width: 14px;
       height: 14px;
@@ -120,6 +122,7 @@
 
     &:hover {
       background-color: $color-focus-social-icon;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -127,6 +130,7 @@
 
     &:focus {
       background-color: $color-default-secondary;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -134,6 +138,7 @@
 
     &:active {
       background-color: $color-default-primary;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -155,7 +160,7 @@
       -webkit-mask-position: 50% 50%;
       mask-position: 50% 50%;
       background-color: $color-default-footer;
-      top:0;
+      top: 0;
       left: 0;
       width: 14px;
       height: 14px;
@@ -164,6 +169,7 @@
 
     &:hover {
       background-color: $color-focus-social-icon;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -171,6 +177,7 @@
 
     &:focus {
       background-color: $color-default-secondary;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -178,6 +185,7 @@
 
     &:active {
       background-color: $color-default-primary;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -199,7 +207,7 @@
       -webkit-mask-position: 50% 50%;
       mask-position: 50% 50%;
       background-color: $color-default-footer;
-      top:0;
+      top: 0;
       left: 0;
       width: 14px;
       height: 14px;
@@ -208,6 +216,7 @@
 
     &:hover {
       background-color: $color-focus-social-icon;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -215,6 +224,7 @@
 
     &:focus {
       background-color: $color-default-secondary;
+
       &::before {
         background-color: $color-default-white;
       }
@@ -222,6 +232,7 @@
 
     &:active {
       background-color: $color-default-primary;
+
       &::before {
         background-color: $color-default-white;
       }

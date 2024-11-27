@@ -15,8 +15,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "title media"
-    "text media";
+      "title media"
+      "text  media";
     row-gap: 0;
     padding: 60px 103px 120px;
   }
@@ -39,6 +39,7 @@
 
 .about__title {
   @include margin-reset;
+
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 32px;
@@ -58,6 +59,7 @@
 
 .about__title-description {
   @include margin-reset;
+
   font-size: 18px;
 
   @include vp-768 {
@@ -86,11 +88,11 @@
     flex-wrap: wrap;
     width: 355px;
   }
-
 }
 
 .about__text-content p {
   @include margin-reset;
+
   font-weight: 300;
   line-height: 22px;
 
@@ -140,6 +142,27 @@
   }
 }
 
+.about__video-poster {
+  width: 320px;
+  height: 170px;
+
+  @include vp-768 {
+    width: 270px;
+    height: 170px;
+  }
+
+  @include vp-1366 {
+    width: 360px;
+    height: 230px;
+  }
+}
+
+.about__video-poster iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .about__video-play-btn {
   position: absolute;
   top: 50%;
@@ -150,7 +173,7 @@
   border: none;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  background: linear-gradient(90deg, #ED0233 0, #003EB7 100%);
+  background: linear-gradient(90deg, #ed0233 0, #003eb7 100%);
 
   &::before {
     content: "";

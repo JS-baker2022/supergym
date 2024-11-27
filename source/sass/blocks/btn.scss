@@ -48,7 +48,6 @@
   }
 
 
-
   &--disabled {
     color: $color-alt-white;
     opacity: 0.5;
@@ -56,8 +55,33 @@
   }
 
   &:disabled {
-
-
     pointer-events: none;
+  }
+
+  &--form {
+    color: $color-default-white;
+    border: 2px solid $color-default-white;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    &:hover {
+      background-color: $color-default-white;
+      color: $color-default-secondary;
+    }
+
+    &:focus {
+      background-color: $color-focus-white;
+      color: $color-default-secondary;
+      border: 2px solid $color-default-black;
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      color: $color-default-primary;
+    }
+
+    &:disabled {
+      pointer-events: none;
+    }
   }
 }

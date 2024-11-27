@@ -22,6 +22,7 @@
 
 .features__title {
   @include margin-reset;
+
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -41,6 +42,7 @@
 
 .features__list {
   @include list-style-reset;
+
   display: flex;
   flex-direction: column;
   row-gap: 35px;
@@ -82,16 +84,16 @@
       align-items: center;
       flex-direction: column;
     }
+
     @include vp-1366 {
       grid-row: 1 /3;
-      grid-column:  2 / 3;
+      grid-column: 2 / 3;
     }
   }
 }
 
 .features__list-item-value {
-  background: linear-gradient(-63deg, #D10A42 0%, #0041CA 45.58%);
-  -webkit-background-clip: text;
+  background: linear-gradient(-63deg, #d10a42 0%, #0041ca 45.58%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: flex;
@@ -105,6 +107,7 @@
 
   & :first-child {
     @include margin-reset;
+
     line-height: 64px;
     font-size: 64px;
     font-weight: 700;
@@ -112,6 +115,7 @@
 
   & :last-child {
     @include margin-reset;
+
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -119,7 +123,6 @@
 
   &--special {
     background: $color-default-white;
-    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $color-default-white;
@@ -127,10 +130,8 @@
     & :last-child {
       font-size: 22px;
       line-height: 22px;
-
     }
   }
-
 }
 
 .features__list-item-description {
@@ -146,12 +147,14 @@
 
   & :first-child {
     @include margin-reset;
+
     line-height: 18px;
     font-size: 20px;
   }
 
   & :last-child {
     @include margin-reset;
+
     font-size: 14px;
     line-height: 22px;
     width: 230px;
@@ -163,10 +166,9 @@
   }
 
   &--special {
-
     & :last-child {
-          @include vp-768 {
-            text-align: center;
+      @include vp-768 {
+        text-align: center;
       }
     }
   }

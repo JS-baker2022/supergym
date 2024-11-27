@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(90deg,#1c3477 0,#1c3477 .01%,#1a3578 39.11%,#73184b 75.5%,#b4022a 100%);
+  background: linear-gradient(90deg, #1c3477 0, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
   color: $color-default-white;
 }
 
@@ -101,16 +101,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-  "list city"
-  "list name"
-  "btn btn";
+    "list city"
+    "list name"
+    "btn  btn";
   column-gap: 21px;
 
   @include vp-768 {
     grid-template-areas:
-    "list city"
-    "list name"
-    ". btn";
+      "list city"
+      "list name"
+      ".    btn";
     width: 324px;
   }
 
@@ -121,6 +121,7 @@
 
 .header__hero-list {
   @include list-style-reset;
+
   grid-area: list;
   display: flex;
   flex-direction: column;
@@ -135,6 +136,7 @@
 
 .header__hero-title {
   @include margin-reset;
+
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-style: normal;
   text-align: end;
@@ -180,7 +182,7 @@
 
 .header__hero-btn {
   grid-area: btn;
-  color: white;
+  color: $color-default-white;
   align-self: center;
   margin-top: 48px;
 }

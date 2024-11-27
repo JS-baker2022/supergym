@@ -34,9 +34,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-  "title date"
-  "text text"
-  "btn btn";
+    "title date"
+    "text  text"
+    "btn   btn";
   row-gap: 16px;
   column-gap: 37px;
 
@@ -52,6 +52,7 @@
 
 .games__title {
   @include margin-reset;
+
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 48px;
@@ -76,6 +77,7 @@
 
 .games__date-block {
   @include margin-reset;
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -140,6 +142,7 @@
 
 .games__text-content {
   @include margin-reset;
+
   grid-area: text;
   font-size: 16px;
   line-height: 20px;

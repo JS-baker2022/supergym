@@ -6,6 +6,7 @@
 
 .price__title {
   @include margin-reset;
+
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 32px;
@@ -44,7 +45,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .price__tabs-btn {
@@ -57,6 +57,7 @@
 
 .price__list {
   @include list-style-reset;
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

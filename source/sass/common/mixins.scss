@@ -3,33 +3,33 @@
 @mixin vp-320 {
   @media (min-width: $vp-320) {
     @content;
- }
+  }
 }
 
 @mixin vp-768 {
   @media (min-width: $vp-768) {
-   @content;
+    @content;
   }
 }
 
 
 @mixin vp-1366 {
- @media (min-width: $vp-1366) {
-  @content;
- }
+  @media (min-width: $vp-1366) {
+    @content;
+  }
 }
 
 
 @mixin list-style-reset {
- margin-top: 0;
- margin-bottom: 0;
- padding-left: 0;
- list-style: none;
- @content;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  @content;
 }
 
 @mixin margin-reset {
- margin: 0;
+  margin: 0;
 }
 
 @mixin hover-focus {
@@ -39,7 +39,7 @@
     }
   }
 
-  &.focus-visible:focus {
+  &:focus-visible:focus {
     @content;
   }
 }
