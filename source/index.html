@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUPERGYM</title>
   <meta name="description" content="Самый большой фитнесс центр за Уралом для всех спортсменов.">
+  <link rel="stylesheet" href="sass/vendor/swiper-bundle.css">
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="preload" href="fonts/alumni-sans/alumni-sans-v18-cyrillic_latin-600.woff2" as="font"
     crossorigin="anonymous">
@@ -30,9 +31,10 @@
       <use href="/__spritemap#sprite-user"></use>
     </svg> -->
   <header class="header container" data-test="hero">
+    <h1 class="visually-hidden">Фитнес центра Supergym.</h1>
     <div class="header__contacts">
       <div class="header__logo">
-        <img src="img/logo.svg" alt="Логотип Логотип фитнес центра Supergym." width="100" height="20">
+        <img src="img/logo.svg" alt="Логотип фитнес центра Supergym." width="100" height="20">
       </div>
       <div class="header__phone">
         <a class="header__phone-link" href="tel:+78005555555" target="_blank"
@@ -46,18 +48,18 @@
           <li class="header__hero-list-item">Групповые&nbsp;занятия</li>
           <li class="header__hero-list-item">Кардио&nbsp;зона</li>
         </ul>
-        <h3 class="header__hero-title header__hero-title--city">Омск</h3>
-        <h2 class="header__hero-title header__hero-title--name">Фитнес центр</h2>
+        <h2 class="header__hero-title header__hero-title--city">Омск</h2>
+        <h3 class="header__hero-title header__hero-title--name">Фитнес центр</h3>
         <a class="header__hero-btn btn btn--hero" href="#price">Купить абонемент</a>
       </div>
       <div class="header__hero-image">
         <picture>
           <source type="image/webp" media="(min-width: 1366px)"
             srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x" width="500" height="524">
-          <source type="image/webp" srcset="img/hero@1x.webp 1x, img/hero@2x.webp 2x" width="324" height="390">
-          <source media="(min-width: 1366px)" srcset="img/hero-desktop@1x.png 1x, img/hero-desktop@2x.png 2x"
+          <source type="image/webp" srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x" width="324" height="390">
+          <source type="image/png" media="(min-width: 1366px)" srcset="img/hero-desktop@1x.png 1x, img/hero-desktop@2x.png 2x"
             width="500" height="524">
-          <img src="img/hero@1x.png" srcset="img/hero@2x.png" alt="Воспитанник фитнес центра Supergym." width="324"
+          <img src="img/hero-tablet@1x.png" srcset="img/hero-tablet@2x.png" alt="Воспитанник фитнес центра Supergym." width="324"
             height="390">
         </picture>
       </div>
@@ -70,8 +72,10 @@
         <p class="about__title-description">Просторный зал площадью 900 кв/м</p>
       </div>
       <div class="about__text-content">
-        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
-        <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный
+          зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+        <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре
+          есть несколько оборудованных залов для различных видов групповых занятий.</p>
       </div>
       <div class="about__media-block">
         <div class="about__img">
@@ -80,36 +84,38 @@
               srcset="img/gym-desktop@1x.webp 1x, img/gym-desktop@2x.webp 2x" width="660" height="400">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/gym-tablet@1x.webp 1x, img/gym-tablet@2x.webp 2x" width="678" height="345">
-            <source type="image/webp" srcset="img/gym@1x.webp 1x, img/gym@2x.webp 2x" width="320" height="280">
-            <source media="(min-width: 1366px)" srcset="img/gym-desktop@1x.jpg 1x, img/gym-desktop@2x.jpg 2x"
-              width="660" height="400">
-            <source media="(min-width: 768px)" srcset="img/gym-tablet@1x.jpg 1x, img/gym-tablet@2x.jpg 2x"
-              width="678" height="345">
-            <img src="img/gym@1x.jpg" srcset="img/gym@2x.jpg" alt="Вид тренажёров в зале фитнес центра Supergym." width="320"
+            <source type="image/webp" srcset="img/gym-mobile@1x.webp 1x, img/gym-mobile@2x.webp 2x" width="320"
               height="280">
+            <source type="image/jpg" media="(min-width: 1366px)" srcset="img/gym-desktop@1x.jpg 1x, img/gym-desktop@2x.jpg 2x"
+              width="660" height="400">
+            <source type="image/jpg" media="(min-width: 768px)" srcset="img/gym-tablet@1x.jpg 1x, img/gym-tablet@2x.jpg 2x" width="678"
+              height="345">
+            <img src="img/gym-mobile@1x.jpg" srcset="img/gym-mobile@2x.jpg"
+              alt="Вид тренажёров в зале фитнес центра Supergym." width="320" height="280">
           </picture>
         </div>
         <div class="about__video">
-          <div class="about__video-poster">
+          <div class="about__video-poster" data-overlay="about">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)"
                 srcset="img/poster-desktop@1x.webp 1x, img/poster-desktop@2x.webp 2x" width="360" height="230">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/poster-tablet@1x.webp 1x, img/poster-tablet@2x.webp 2x" width="270" height="170">
-              <source type="image/webp" srcset="img/poster@1x.webp 1x, img/poster@2x.webp 2x" width="320" height="170">
-              <source media="(min-width: 1366px)" srcset="img/poster-desktop@1x.jpg 1x, img/poster-desktop@2x.jpg 2x"
-                width="360" height="230">
-              <source media="(min-width: 768px)" srcset="img/poster-tablet@1x.jpg 1x, img/poster-tablet@2x.jpg 2x"
-                width="270" height="170">
-              <img src="img/poster@1x.jpg" srcset="img/poster@2x.jpg" alt="Постер предпросмотра видео тренажёрного зала фитнес центра Supergym." width="320"
+              <source type="image/webp" srcset="img/poster-mobile@1x.webp 1x, img/poster-mobile@2x.webp 2x" width="320"
                 height="170">
+              <source type="image/jpg" media="(min-width: 1366px)" srcset="img/poster-desktop@1x.jpg 1x, img/poster-desktop@2x.jpg 2x"
+                width="360" height="230">
+              <source type="image/jpg" media="(min-width: 768px)" srcset="img/poster-tablet@1x.jpg 1x, img/poster-tablet@2x.jpg 2x"
+                width="270" height="170">
+              <img src="img/poster-mobile@1x.jpg" srcset="img/poster-mobile@2x.jpg"
+                alt="Постер предпросмотра видео тренажёрного зала фитнес центра Supergym." width="320" height="170">
             </picture>
+            <button class="about__video-play-btn" type="button" data-button="about"><span class="visually-hidden">Нажмите на кнопку для просмотра
+              видео.</span></button>
           </div>
-          <button class="about__video-play-btn"><span class="visually-hidden">Нажмите на кнопку для просмотра видео.</span></button>
+
         </div>
       </div>
-
-
     </section>
     <section class="price container" data-test="price">
       <h2 class="price__title">Абонементы</h2>
@@ -198,7 +204,8 @@
               <dt class="games__date-number-title">Дата</dt>
               <dd class="games__date-number-value">
                 <span class="games__date-number-value-day">7</span>
-                <span class="games__date-number-value-month">Марта 2019</span></dd>
+                <span class="games__date-number-value-month">Марта 2019</span>
+              </dd>
             </dl>
             <dl class="games__date-block games__date-block--time">
               <dt class="games__date-time-title">Время</dt>
@@ -213,16 +220,18 @@
         <div class="games__img-block">
           <picture>
             <source type="image/webp" media="(min-width: 1366px)"
-              srcset="img/games-bunner-desktop@1x.webp 1x, img/games-bunner-desktop@2x.webp 2x" width="660" height="500">
+              srcset="img/games-bunner-desktop@1x.webp 1x, img/games-bunner-desktop@2x.webp 2x" width="660"
+              height="500">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/games-bunner-tablet@1x.webp 1x, img/games-bunner-tablet@2x.webp 2x" width="378" height="348">
-            <source type="image/webp" srcset="img/games-bunner@1x.webp 1x, img/games-bunner@2x.webp 2x" width="290" height="290">
-            <source media="(min-width: 1366px)" srcset="img/games-bunner-desktop@1x.jpg 1x, img/games-bunner-desktop@2x.jpg 2x"
-              width="660" height="500">
-            <source media="(min-width: 768px)" srcset="img/games-bunner-tablet@1x.jpg 1x, img/games-bunner-tablet@2x.jpg 2x"
-              width="378" height="348">
-            <img src="img/games-bunner@1x.jpg" srcset="img/games-bunner@2x.jpg" alt="Атлет делает планку на полу в клубах талька." width="290"
+            <source type="image/webp" srcset="img/games-bunner@1x.webp 1x, img/games-bunner@2x.webp 2x" width="290"
               height="290">
+            <source type="image/jpg" media="(min-width: 1366px)"
+              srcset="img/games-bunner-desktop@1x.jpg 1x, img/games-bunner-desktop@2x.jpg 2x" width="660" height="500">
+            <source type="image/jpg" media="(min-width: 768px)"
+              srcset="img/games-bunner-tablet@1x.jpg 1x, img/games-bunner-tablet@2x.jpg 2x" width="378" height="348">
+            <img src="img/games-bunner@1x.jpg" srcset="img/games-bunner@2x.jpg"
+              alt="Атлет делает планку на полу в клубах талька." width="290" height="290">
           </picture>
         </div>
       </div>
@@ -282,13 +291,375 @@
         </li>
       </ul>
     </section>
-    <section class="offers" data-test="offers">offers</section>
-    <section class="faq" data-test="faq">faq</section>
-    <section class="reviews" data-test="reviews">reviews</section>
-    <section class="form" data-test="form">form</section>
+    <section class="offers" data-test="offers">
+      <h2 class="offers__title">Акции</h2>
+      <div class="offers__wrapper-double-size-card">
+        <article class="offers__card offers__card--bunner">
+          <div class="offers__card-text offers__card-text--bunner text-content">
+            <h4>Год</h4>
+            <span>4999</span>
+            <p>Безлимитный абонемент в тренажерный зал</p>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="offers__card-bunner">
+            <picture>
+              <source type="image/webp" media="(min-width: 1366px)"
+                srcset="img/offers-bunner-desktop@1x.webp 1x, img/offers-bunner-desktop@2x.webp 2x" width="280"
+                height="460">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/offers-bunner-tablet@1x.webp 1x, img/offers-bunner-tablet@2x.webp 2x" width="400"
+                height="462">
+              <source type="image/webp"
+                srcset="img/offers-bunner-mobile@1x.webp 1x, img/offers-bunner-mobile@2x.webp 2x" width="320"
+                height="360">
+              <source type="image/jpg" media="(min-width: 1366px)"
+                srcset="img/offers-bunner-desktop@1x.jpg 1x, img/offers-bunner-desktop@2x.jpg 2x" width="280"
+                height="460">
+              <source type="image/jpg" media="(min-width: 768px)"
+                srcset="img/offers-bunner-tablet@1x.jpg 1x, img/offers-bunner-tablet@2x.jpg 2x" width="400"
+                height="462">
+              <img src="img/offers-bunner-mobile@1x.jpg" srcset="img/offers-bunner-mobile@2x.jpg"
+                alt="Улыбающаяся девушка одетая для занятия фитнесом." width="320" height="360">
+            </picture>
+          </div>
+        </article>
+      </div>
+      <div class="offers__wrapper-single-size-card">
+        <article class="offers__card">
+          <div class="offers__card-text text-content">
+            <h4>Месяц бесплатно</h4>
+            <p>Приведи друга, получи абонемент в подарок</p>
+            <a href="#">Подробнее</a>
+          </div>
+        </article>
+        <article class="offers__card">
+          <div class="offers__card-text text-content">
+            <h4>Скидка 20%</h4>
+            <p>Корпоративный фитнес с командой</p>
+            <a href="#">Подробнее</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="faq container" data-test="faq">
+      <h2 class="faq__title">Вопросы и ответы</h2>
+      <div class="faq__tabs tabs no-transition-global" data-tabs="parent">
+        <div class="faq__tabs-controls tabs__controls" data-tabs="controls">
+          <button class="faq__tabs-btn tabs__control btn is-active" type="button" data-tabs="control">Центр</button>
+          <button class="faq__tabs-btn tabs__control btn" type="button" data-tabs="control">Абонемент</button>
+          <button class="faq__tabs-btn tabs__control btn" type="button" data-tabs="control">Услуги</button>
+          <button class="faq__tabs-btn tabs__control btn" type="button" data-tabs="control">Правила</button>
+        </div>
+        <div class="faq__tabs-content tabs__content" data-tabs="content">
+          <div class="faq__tabs-element tabs__element" data-tabs="element">
+            <div class="faq__accordion accordion" data-accordion="parent">
+              <div class="faq__accordion-element accordion__element is-active" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Как стать членом фитнес&nbsp;-центра?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор.
+                      При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Где можно посмотреть расписание?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть
+                      возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую
+                      неделю.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Есть кулеры в центре? Предоставляются полотенца?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
+                      Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                      шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                      тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Сколько тренеров работает в клубе и какова их квалификация?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор.
+                      При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq__tabs-element tabs__element" data-tabs="element">
+            <div class="faq__accordion accordion" data-accordion="parent">
+              <div class="faq__accordion-element accordion__element is-active" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Занятия с тренером входят в абонемент?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Можно ли заморозить абонемент?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть
+                      возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую
+                      неделю.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
+                      Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                      шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                      тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Что такое семейный доступ и доступ для друзей?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор.
+                      При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq__tabs-element tabs__element" data-tabs="element">
+            <div class="faq__accordion accordion" data-accordion="parent">
+              <div class="faq__accordion-element accordion__element is-active" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть
+                      возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую
+                      неделю.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Можно ли приобрести в центре спортивное питание?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
+                      Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                      шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                      тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Есть ли в центре детская комната?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор.
+                      При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq__tabs-element tabs__element" data-tabs="element">
+            <div class="faq__accordion accordion" data-accordion="parent">
+              <div class="faq__accordion-element accordion__element is-active" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Есть в фитнес-центре дресс-код?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Можно ли приводить с собой детей на тренировки?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть
+                      возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую
+                      неделю.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Какие дополнительные правила посещения центра?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
+                      Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                      шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                      тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__accordion-element accordion__element" data-accordion="element">
+                <h3 class="faq__accordion-element-title accordion__element-title">Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+                <button class="faq__accordion-btn accordion__button btn" type="button" data-accordion="button"><span class="visually-hidden">Открыть или закрыть элемент.</span></button>
+                <div class="faq__accordion-content accordion__content" data-accordion="content">
+                  <div class="faq__accordion-wrapper accordion__wrapper">
+                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор.
+                      При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews" data-test="reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <div class="reviews__swiper swiper" data-reviews-swiper="reviews__swiper">
+        <ul class="reviews__list swiper-wrapper">
+          <li class="reviews__list-item swiper-slide">
+            <div class="reviews__list-item-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/reviews-tablet@1x.webp 1x, img/reviews-tablet@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="img/reviews-mobile@1x.webp 1x, img/reviews-mobile@2x.webp 2x" width="68"
+                  height="68">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="img/reviews-tablet@1x.jpg 1x, img/reviews-tablet@2x.jpg 2x" width="80"
+                  height="80">
+                <img src="img/reviews-mobile@1x.jpg" srcset="img/reviews-mobile@2x.jpg"
+                  alt="Фото или аватар автора отзыва" width="68" height="68">
+              </picture>
+            </div>
+            <div class="reviews__list-item-text">
+              <p>Анна Орлова</p>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+          <li class="reviews__list-item swiper-slide">
+            <div class="reviews__list-item-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/reviews-tablet@1x.webp 1x, img/reviews-tablet@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="img/reviews-mobile@1x.webp 1x, img/reviews-mobile@2x.webp 2x" width="68"
+                  height="68">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="img/reviews-tablet@1x.jpg 1x, img/reviews-tablet@2x.jpg 2x" width="80"
+                  height="80">
+                <img src="img/reviews-mobile@1x.jpg" srcset="img/reviews-mobile@2x.jpg"
+                  alt="Фото или аватар автора отзыва" width="68" height="68">
+              </picture>
+            </div>
+            <div class="reviews__list-item-text">
+              <p>Хали Гали</p>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+          <li class="reviews__list-item swiper-slide">
+            <div class="reviews__list-item-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/reviews-tablet@1x.webp 1x, img/reviews-tablet@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="img/reviews-mobile@1x.webp 1x, img/reviews-mobile@2x.webp 2x" width="68"
+                  height="68">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="img/reviews-tablet@1x.jpg 1x, img/reviews-tablet@2x.jpg 2x" width="80"
+                  height="80">
+                <img src="img/reviews-mobile@1x.jpg" srcset="img/reviews-mobile@2x.jpg"
+                  alt="Фото или аватар автора отзыва" width="68" height="68">
+              </picture>
+            </div>
+            <div class="reviews__list-item-text">
+              <p>Буба</p>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+          <li class="reviews__list-item swiper-slide">
+            <div class="reviews__list-item-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/reviews-tablet@1x.webp 1x, img/reviews-tablet@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="img/reviews-mobile@1x.webp 1x, img/reviews-mobile@2x.webp 2x" width="68"
+                  height="68">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="img/reviews-tablet@1x.jpg 1x, img/reviews-tablet@2x.jpg 2x" width="80"
+                  height="80">
+                <img src="img/reviews-mobile@1x.jpg" srcset="img/reviews-mobile@2x.jpg"
+                  alt="Фото или аватар автора отзыва" width="68" height="68">
+              </picture>
+            </div>
+            <div class="reviews__list-item-text">
+              <p>Терминатор</p>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+    <section class="form" data-test="form">
+      <h2 class="visually-hidden">Форма и контакты для записи на бесплатное занятие.</h2>
+      <div class="form__wrapper container">
+        <h3 class="form__title">Бесплатное занятие</h3>
+        <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="form__label">
+            <span class="visually-hidden">Поле для ввода имени.</span>
+            <input class="form__input" type="text" name="person-name" placeholder="Имя" required>
+          </label>
+          <label class="form__label">
+            <span class="visually-hidden">Поле для ввода номера телефона.</span>
+            <input class="form__input" type="tel" name="phone" placeholder="Телефон" pattern="8\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+          </label>
+          <button class="form__btn btn btn--form" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="form__contacts contacts container">
+        <h2 class="contacts__title">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__list-item">
+            <h3 class="contacts__list-item-title">Адрес</h3>
+            <address class="contacts__list-item-text contacts__list-item-text--address">г. Омск, ул. 60 лет Октября, 7</address>
+          </li>
+          <li class="contacts__list-item">
+            <h3 class="contacts__list-item-title">График работы:</h3>
+            <p class="contacts__list-item-text contacts__list-item-text--time">Пн-Вс: с 8:00 до 22:00</p>
+          </li>
+          <li class="contacts__list-item">
+            <h3 class="contacts__list-item-title">Телефон:</h3>
+            <a class="contacts__list-item-text contacts__list-item-text--tel" href="tel:+78005555555" target="_blank" rel="noreferrer noopener">8 800 555-55-55</a>
+          </li>
+          <li class="contacts__list-item">
+            <h3 class="contacts__list-item-title">Email:</h3>
+            <a class="contacts__list-item-text contacts__list-item-text--mail" href="mailto:oмск@supergym.ru" target="_blank" rel="noreferrer noopener">oмск@supergym.ru</a>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="footer container" data-test="footer">
       <div class="footer__logo">
-        <img src="img/logo.svg" alt="Логотип Логотип фитнес центра Supergym." width="100" height="20">
+        <img src="img/logo.svg" alt="Логотип фитнес центра Supergym." width="100" height="20">
       </div>
       <ul class="footer__nav-list">
         <li class="footer__nav-item">
@@ -309,17 +680,20 @@
       </ul>
       <ul class="footer__social-list">
         <li class="footer__social-list-item">
-          <a class="footer__social-list-link footer__social-list-link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+          <a class="footer__social-list-link footer__social-list-link--vk" href="https://vk.com/htmlacademy"
+            target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти на нашу страницу Вконтакте.</span>
           </a>
         </li>
         <li class="footer__social-list-item">
-          <a class="footer__social-list-link footer__social-list-link--ok" href="https://ok.ru/htmlacademy" target="_blank" rel="noreferrer noopener">
+          <a class="footer__social-list-link footer__social-list-link--ok" href="https://ok.ru/htmlacademy"
+            target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти на нашу страницу в Одноклассниках.</span>
           </a>
         </li>
         <li class="footer__social-list-item">
-          <a class="footer__social-list-link footer__social-list-link--reddit" href="https://www.reddit.com" target="_blank" rel="noreferrer noopener">
+          <a class="footer__social-list-link footer__social-list-link--reddit" href="https://www.reddit.com"
+            target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти на нашу страницу Reddit.</span>
           </a>
         </li>
