@@ -1,4 +1,4 @@
-import Swiper from '../../vendor/swiper/swiper';
+import Swiper from 'swiper';
 
 const sectionClassName = 'reviews__swiper';
 const reviewsContainer = document.querySelector(`.${sectionClassName}`);
