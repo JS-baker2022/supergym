@@ -1,0 +1,170 @@
+.offers {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-768 {
+    padding: 60px 45px;
+    row-gap: 35px;
+  }
+
+  @include vp-1366 {
+    padding: 100px 103px;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title  title"
+      "double single";
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.offers__title {
+  @include margin-reset;
+
+  grid-area: title;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  font-size: 32px;
+
+  @include vp-768 {
+    line-height: 42px;
+    font-size: 42px;
+  }
+
+  @include vp-1366 {
+    line-height: 54px;
+    font-size: 54px;
+    justify-self: center;
+  }
+}
+
+.offers__wrapper-double-size-card {
+  grid-area: double;
+}
+
+.offers__wrapper-single-size-card {
+  grid-area: single;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 30px;
+
+  @include vp-768 {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  @include vp-1366 {
+    align-self: self-end;
+  }
+}
+
+.offers__card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: center;
+  border: 7px solid transparent;
+  border-image: linear-gradient(to bottom right, #d10a42, #00359f);
+  border-image-slice: 1;
+
+  @include vp-1366 {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  &--bunner {
+    row-gap: unset;
+    border: none;
+    padding: 0;
+
+    @include vp-768 {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    @include vp-768 {
+      justify-content: end;
+    }
+  }
+}
+
+.offers__card-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 236px;
+
+  @include vp-768 {
+    row-gap: 10px;
+    align-items: start;
+    width: 270px;
+  }
+
+  @include vp-1366 {
+    width: 500px;
+  }
+
+  &--bunner {
+    background-color: $color-default-red-bunner;
+    padding: 30px 0;
+    width: 100%;
+
+    @include vp-768 {
+      width: 278px;
+    }
+
+    @include vp-1366 {
+      width: 280px;
+    }
+  }
+}
+
+.offers__card-text.text-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span {
+    text-align: center;
+
+    @include vp-768 {
+      text-align: start;
+    }
+  }
+}
+
+.offers__card-text--bunner.text-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span {
+    color: $color-default-white;
+    width: 260px;
+    text-align: center;
+  }
+}
