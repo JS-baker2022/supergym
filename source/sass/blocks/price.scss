@@ -2,6 +2,17 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: $color-alt-white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  @include vp-768 {
+    row-gap: 35px;
+  }
+
+  @include vp-1366 {
+    row-gap: 20px;
+  }
 }
 
 .price__title {
@@ -36,6 +47,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  row-gap: 30px;
 }
 
 .price__tabs-controls {
@@ -45,6 +57,21 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: $color-default-primary-opacity;
+  }
+}
+
+.price__tabs-element {
+  width: 100%;
 }
 
 .price__tabs-btn {
@@ -54,6 +81,21 @@
   color: $color-default-primary-opacity;
   padding: 0;
 }
+.price__tabs-btn.is-active {
+  color: $color-default-primary;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: $color-default-red-tab;
+
+  }
+}
 
 .price__list {
   @include list-style-reset;
@@ -62,20 +104,85 @@
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 35px;
+  align-items: center;
 }
 
 .price__card {
   background-color: $color-default-white;
+  padding: 50px 42px;
+  width: 206px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 18px;
+
+  @include vp-768 {
+    row-gap: 22px;
+  }
+
+  @include vp-1366 {
+    row-gap: 17px;
+  }
+
 }
 
 .price__card-title {
   @include margin-reset;
+
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
 }
 
 .price__card-description {
   @include margin-reset;
+
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .price__card-value {
   @include margin-reset;
+
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.5;
+  color: $color-default-secondary;
+  position: relative;
+  padding-top: 25px;
+  z-index: 2;
+
+  &::after {
+    content: attr(data-price);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    color: $color-price-ghost;
+    z-index: -1;
+    font-size: 80px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    -webkit-mask-image: url("/__spritemap#sprite-rubl-view");
+    mask-image: url("/__spritemap#sprite-rubl-view");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 24px 33px;
+    mask-size: 24px 33px;
+    -webkit-mask-position: 50% 50%;
+    mask-position: 50% 50%;
+    background-color: $color-default-primary;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 33px;
+    transform: translateX(439%) translateY(134%);
+  }
 }

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUPERGYM</title>
   <meta name="description" content="Самый большой фитнесс центр за Уралом для всех спортсменов.">
-  <link rel="stylesheet" href="sass/vendor/swiper-bundle.css">
+  <!-- <link rel="stylesheet" href="sass/vendor/swiper-bundle.css"> -->
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="preload" href="fonts/alumni-sans/alumni-sans-v18-cyrillic_latin-600.woff2" as="font"
     crossorigin="anonymous">
@@ -126,68 +126,68 @@
           <button class="price__tabs-btn tabs__control btn" type="button" data-tabs="control">12 месяцев</button>
         </div>
         <div class="tabs__content" data-tabs="content">
-          <div class="tabs__element" data-tabs="element">
+          <div class="price__tabs-element tabs__element" data-tabs="element">
             <ul class="price__list">
               <li class="price__card">
                 <h3 class="price__card-title">С тренером</h3>
                 <p class="price__card-description">12 занятий</p>
-                <p class="price__card-value">5000</p>
+                <p class="price__card-value" data-price="5000">5000</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
               <li class="price__card">
                 <h3 class="price__card-title">Дневной</h3>
                 <p class="price__card-description">с 8:00 до 17:00</p>
-                <p class="price__card-value">1700</p>
+                <p class="price__card-value" data-price="1700">1700</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
               <li class="price__card">
                 <h3 class="price__card-title">Полный день</h3>
                 <p class="price__card-description">с 8:00 до 22:00</p>
-                <p class="price__card-value">2700</p>
+                <p class="price__card-value" data-price="2700">2700</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
             </ul>
           </div>
-          <div class="tabs__element" data-tabs="element">
+          <div class="price__tabs-element tabs__element" data-tabs="element">
             <ul class="price__list">
               <li class="price__card">
                 <h3 class="price__card-title">С тренером</h3>
                 <p class="price__card-description">12 занятий</p>
-                <p class="price__card-value">30000</p>
+                <p class="price__card-value" data-price="30000">30000</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
               <li class="price__card">
                 <h3 class="price__card-title">Дневной</h3>
                 <p class="price__card-description">с 8:00 до 17:00</p>
-                <p class="price__card-value">10200</p>
+                <p class="price__card-value" data-price="10200">10200</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
               <li class="price__card">
                 <h3 class="price__card-title">Полный день</h3>
                 <p class="price__card-description">с 8:00 до 22:00</p>
-                <p class="price__card-value">16200</p>
+                <p class="price__card-value" data-price="16200">16200</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
             </ul>
           </div>
-          <div class="tabs__element" data-tabs="element">
+          <div class="price__tabs-element tabs__element" data-tabs="element">
             <ul class="price__list">
               <li class="price__card">
                 <h3 class="price__card-title">С тренером</h3>
                 <p class="price__card-description">12 занятий</p>
-                <p class="price__card-value">60000</p>
+                <p class="price__card-value" data-price="60000">60000</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
               <li class="price__card">
                 <h3 class="price__card-title">Дневной</h3>
                 <p class="price__card-description">с 8:00 до 17:00</p>
-                <p class="price__card-value">20400</p>
+                <p class="price__card-value" data-price="20400">20400</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
               <li class="price__card">
                 <h3 class="price__card-title">Полный день</h3>
                 <p class="price__card-description">с 8:00 до 22:00</p>
-                <p class="price__card-value">32400</p>
+                <p class="price__card-value" data-price="32400">32400</p>
                 <a class="price__card-btn" href="#">Купить абонемент</a>
               </li>
             </ul>
@@ -238,7 +238,7 @@
     </section>
     <section class="juri" data-test="juri">
       <h2 class="juri__title">Жюри</h2>
-      <div class="juri__swiper swiper" data-reviews-swiper="juri__swiper">
+      <div class="juri__swiper swiper" data-swiper="juri__swiper">
         <ul class="juri__list swiper-wrapper">
           <li class="juri__list-item swiper-slide">
             <div class="juri__list-item-img">
@@ -701,7 +701,7 @@
     </section>
     <section class="reviews" data-test="reviews">
       <h2 class="reviews__title">Отзывы</h2>
-      <div class="reviews__swiper swiper" data-reviews-swiper="reviews__swiper">
+      <div class="reviews__swiper swiper" data-swiper="reviews__swiper">
         <ul class="reviews__list swiper-wrapper">
           <li class="reviews__list-item swiper-slide">
             <div class="reviews__list-item-img">
@@ -861,7 +861,7 @@
       </ul>
     </section>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   <script type="module" src="js/main.js"></script>
 </body>
 
