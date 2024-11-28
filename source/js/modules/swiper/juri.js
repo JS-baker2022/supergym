@@ -2,17 +2,16 @@ import Swiper from 'swiper';
 import {Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 
-const sectionClassName = 'reviews__swiper';
+const sectionClassName = 'juri__swiper';
 const reviewsContainer = document.querySelector(`.${sectionClassName}`);
 
-const initReviewsSwiper = () => {
+const initJuriSwiper = () => {
   if (reviewsContainer) {
     return new Swiper(`[data-swiper="${sectionClassName}"]`, {
       modules: [Navigation, Pagination],
-      slidesPerView: 'auto',
-      centeredSlides: true,
       grabCursor: true,
       speed: 600,
+      slidesPerView: 1,
       spaceBetween: 300,
 
       navigation: {
@@ -25,4 +24,4 @@ const initReviewsSwiper = () => {
   return null;
 };
 
-export {initReviewsSwiper};
+export {initJuriSwiper};
